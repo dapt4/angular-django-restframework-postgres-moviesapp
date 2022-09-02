@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="col-md-6">
+    <form (ngSubmit)="saveData(contactForm)" #contactForm="ngForm">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          name="title"
+          (input)="onInput($event)"
+          value="{{movieData.title}}"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea
+          class="form-control"
+          id="description"
+          rows="3"
+          name="description"
+          (input)="onInput($event)"
+          value="{{movieData.description}}"
+        ></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="year" class="form-label">Year</label>
+        <input
+          type="text"
+          class="form-control"
+          id="year"
+          placeholder="example:1989"
+          name="year"
+          (input)="onInput($event)"
+          value="{{movieData.year}}"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="formFile" class="form-label"> image </label>
+        <input
+          class="form-control"
+          type="file"
+          id="image"
+          name="image"
+          (input)="upload($event)"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+  </div>
+</div>

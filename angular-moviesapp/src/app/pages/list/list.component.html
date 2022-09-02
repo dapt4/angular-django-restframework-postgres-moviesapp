@@ -1,0 +1,45 @@
+
+<h1>List of movies</h1>
+<div class="content">
+  <div class="card" style="width: 18rem" *ngFor="let movie of movies">
+    <img
+      src="http://localhost:8000/{{ movie.image }}"
+      class="card-img-top"
+      alt="{{ movie.title }}"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ movie.title }}</h5>
+      <h4>{{ movie.year }}</h4>
+      <p class="card-text">
+        {{ movie.description }}
+      </p>
+      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+      <div class="dropdown">
+        <button
+          class="btn btn-light dropdown-toggle"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" [routerLink]="['/','edit', movie.id]">
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+              edit
+          </a></li>
+          <li><a class="dropdown-item" (click)="deleteMovie(movie.id)">
+              <i class="fa fa-trash" aria-hidden="true"></i>
+              delete
+            </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <a href="/new">
+    <div class="newMovie">
+        <i class="fa fa-plus"></i>
+    </div>
+  </a>
+</div>
+
