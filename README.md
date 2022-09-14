@@ -1,11 +1,8 @@
 # angular-django-restframework-postgres-moviesapp
 
-<<<<<<< HEAD
 ![image](https://user-images.githubusercontent.com/67972962/188239827-5f64d120-ebb4-4efc-bddd-fdb161ee9bc2.png)
 
 
-=======
->>>>>>> adding the project files to the repo
 first create your virtualenv
 
 `$ python3 -m venv venv`
