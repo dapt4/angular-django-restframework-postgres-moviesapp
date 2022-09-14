@@ -5,6 +5,8 @@
 
 first create your virtualenv
 
+`$ cd django`
+
 `$ python3 -m venv venv`
 
 activate venv
@@ -45,7 +47,7 @@ open your browser or your REST Client in:
 
 active the frontend with:
 
-`cd angular-moviesapp`\
+`cd ../angular-moviesapp`\
 `ng serve`
 
 open the browser in:
